@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barber Marko - Muški frizerski salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <span class="eyebrow">Muški frizerski salon</span>
+    <h1>Barber Marko</h1>
+    <p class="tagline">Šišanje, brijanje i njega brade za pravi muški stil</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Cjenik usluga</h2>
+      <ul class="price-list">
+        <li><span>Muško šišanje</span><span class="price">12 €</span></li>
+        <li><span>Šišanje + brada</span><span class="price">18 €</span></li>
+        <li><span>Brijanje britvom</span><span class="price">15 €</span></li>
+        <li><span>Fade frizura</span><span class="price">15 €</span></li>
+        <li><span>Oblikovanje brade</span><span class="price">8 €</span></li>
+        <li><span>Dječje šišanje</span><span class="price">10 €</span></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Rezerviraj termin</h2>
+
+      <form id="booking-form">
+        <input id="name" type="text" placeholder="Ime i prezime" required />
+        <select id="service" required>
+          <option value="" disabled selected>Odaberi uslugu</option>
+          <option>Muško šišanje</option>
+          <option>Šišanje + brada</option>
+          <option>Brijanje britvom</option>
+          <option>Fade frizura</option>
+          <option>Oblikovanje brade</option>
+          <option>Dječje šišanje</option>
+        </select>
+        <input id="time" type="text" placeholder="npr. Petak 15:00" required />
+        <button type="submit">Rezerviraj</button>
+      </form>
+
+      <h3>Zakazani termini</h3>
+      <ul id="appointments"></ul>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
