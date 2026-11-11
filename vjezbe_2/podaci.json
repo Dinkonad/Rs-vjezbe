@@ -1,0 +1,43 @@
+{
+  "usluge": [
+    {
+      "usluga": "sisanje",
+      "cijena": 10
+    },
+    {
+      "usluga": "zensko sisanje",
+      "cijena": 20
+    },
+    {
+      "usluga": "brijanje",
+      "cijena": 15
+    }
+  ],
+  "frizeri": [
+    {
+      "ime": "Dinko",
+      "prezime": "Nad"
+    },
+    {
+      "ime": "Luka",
+      "prezime": "Relja"
+    }
+  ],
+  "termini": [
+    {
+      "datum": "11-10",
+      "vrijeme": "09.00",
+      "slobodno": true
+    },
+    {
+      "datum": "11-10",
+      "vrijeme": "10.30",
+      "slobodno": false
+    },
+    {
+      "datum": "11-10",
+      "vrijeme": "12.00",
+      "slobodno": true
+    }
+  ]
+}

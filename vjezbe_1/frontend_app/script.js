@@ -64,3 +64,33 @@ list.addEventListener("click", async (e) => {
 });
 
 loadAppointments();
+
+async function ucitajPodatke() {
+  const frizeriLista = document.getElementById("frizeri-lista");
+  const terminiLista = document.getElementById("slobodni-termini-lista");
+
+  try {
+    const res = await fetch("podaci.json");
+    const podaci = await res.json();
+
+    frizeriLista.innerHTML = "";
+    for (const f of podaci.frizeri) {
+      const li = document.createElement("li");
+      li.innerHTML = `<span>${f.ime} ${f.prezime}</span>`;
+      frizeriLista.appendChild(li);
+    }
+
+    terminiLista.innerHTML = "";
+    for (const t of podaci.termini) {
+      const li = document.createElement("li");
+      const status = t.slobodno ? "slobodno" : "zauzeto";
+      li.innerHTML = `<span>${t.datum} - ${t.vrijeme}</span><span class="price">${status}</span>`;
+      terminiLista.appendChild(li);
+    }
+  } catch (err) {
+    frizeriLista.innerHTML = "<li>Greška pri učitavanju podaci.json</li>";
+    terminiLista.innerHTML = "";
+  }
+}
+
+ucitajPodatke();
